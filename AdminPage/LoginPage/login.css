@@ -1,0 +1,6 @@
+body {
+	padding-top: 20px;
+	background: url('../images/back.jpg') center top no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
