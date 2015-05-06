@@ -13,16 +13,17 @@
    		throw new My_Db_Exception('Database error: ' . mysql_error());
 	}
 		
+	$username = null;
 	if($result)
 	{
 		while($row = $result->fetch_assoc()) {
-			echo $row["username"];
+			$username = $row["username"];
 		}
 	}
 
-	if($result){
+	if($username != null){
 		require_once("\..\PresentationLayer\AdminPage.php");
 	}else{
-		require_once("\..\PresentationLayer\AdminPage.php");
+		require_once("\..\index.php");
 	}
 ?>
